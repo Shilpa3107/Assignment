@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+    <classpathentry kind="src" path="src"/>
+    <classpathentry kind="lib" path="lib/poi-5.2.5.jar"/>
+    <classpathentry kind="lib" path="lib/poi-ooxml-5.2.5.jar"/>
+    <classpathentry kind="lib" path="lib/poi-ooxml-lite-5.2.5.jar"/>
+    <!-- Add other JAR entries as needed -->
+    <output dir="bin"/>
+</classpath>
