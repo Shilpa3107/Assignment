@@ -26,18 +26,50 @@ public class ReadExcelFile {
             while (rowIterator.hasNext()) {
                 Row row = rowIterator.next();
                 String employeeName = row.getCell(7).getStringCellValue();
-                Date timeIn = row.getCell(2).getDateCellValue();
-                Date timeOut = row.getCell(3).getDateCellValue();
-
-                // Calculate shift duration
-                long shiftDuration = (timeOut.getTime() - timeIn.getTime()) / (60 * 1000);
-
-                // Create Shift object
-                Shift shift = new Shift(timeIn, timeOut, shiftDuration);
-
-                // Update employee shifts
-                employeeShifts.computeIfAbsent(employeeName, k -> new ArrayList<>()).add(shift);
+                Cell timeInCell = row.getCell(2);
+                Cell timeOutCell = row.getCell(3);
+                
+                Date timeIn, timeOut;
+                
+                try {
+                    if (timeInCell == null || timeOutCell == null ||
+                    timeInCell.getCellType() == CellType.BLANK || timeOutCell.getCellType() == CellType.BLANK) {
+                    // Skip empty cells
+                    continue;
+                }
+                    if (timeInCell.getCellType() == CellType.NUMERIC || timeInCell.getCellType() == CellType.FORMULA) {
+                        timeIn = timeInCell.getDateCellValue();
+                    } else if (timeInCell.getCellType() == CellType.STRING) {
+                        timeIn = new SimpleDateFormat("MM/dd/yyyy hh:mm a").parse(timeInCell.getStringCellValue());
+                    } else {
+                        // Handle other cell types if necessary
+                        continue;
+                    }
+                    
+                    if (timeOutCell.getCellType() == CellType.NUMERIC || timeOutCell.getCellType() == CellType.FORMULA) {
+                        timeOut = timeOutCell.getDateCellValue();
+                    } else if (timeOutCell.getCellType() == CellType.STRING) {
+                        timeOut = new SimpleDateFormat("MM/dd/yyyy hh:mm a").parse(timeOutCell.getStringCellValue());
+                    } else {
+                        // Handle other cell types if necessary
+                        continue;
+                    }
+                
+                    // Calculate shift duration
+                    long shiftDuration = (timeOut.getTime() - timeIn.getTime()) / (60 * 1000);
+                
+                    // Create Shift object
+                    Shift shift = new Shift(timeIn, timeOut, shiftDuration);
+                
+                    // Update employee shifts
+                    employeeShifts.computeIfAbsent(employeeName, k -> new ArrayList<>()).add(shift);
+                
+                } catch (ParseException | IllegalStateException e) {
+                    // Handle the ParseException or IllegalStateException, e.g., log the error or skip the row
+                    e.printStackTrace();
+                }
             }
+            
 
             // Analyze and print results
             analyzeAndPrintResults(employeeShifts);
