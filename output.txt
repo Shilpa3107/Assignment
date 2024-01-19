@@ -1,0 +1,222 @@
+(base) PS C:\Users\Deepika\Desktop\Assignment> javac -cp ".;lib\*" src\ReadExcelFile.java
+Note: Annotation processing is enabled because one or more processors were found
+  on the class path. A future release of javac may disable annotation processing
+  unless at least one processor is specified by name (-processor), or a search
+  path is specified (--processor-path, --processor-module-path), or annotation
+  processing is enabled explicitly (-proc:only, -proc:full).
+  Use -Xlint:-options to suppress this message.
+  Use -proc:none to disable annotation processing.
+(base) PS C:\Users\Deepika\Desktop\Assignment> java -cp ".;lib\*" src.ReadExcelFile    
+Error parsing date. Skipping row.
+java.lang.IllegalStateException: Cannot get a STRING value from a NUMERIC cell
+        at org.apache.poi.xssf.usermodel.XSSFCell.typeMismatch(XSSFCell.java:984)      
+        at org.apache.poi.xssf.usermodel.XSSFCell.getRichStringCellValue(XSSFCell.java:311)
+        at org.apache.poi.xssf.usermodel.XSSFCell.getStringCellValue(XSSFCell.java:280)        at src.ReadExcelFile.main(ReadExcelFile.java:50)
+Error parsing date. Skipping row.
+java.lang.IllegalStateException: Cannot get a STRING value from a NUMERIC cell
+        at org.apache.poi.xssf.usermodel.XSSFCell.typeMismatch(XSSFCell.java:984)      
+        at org.apache.poi.xssf.usermodel.XSSFCell.getRichStringCellValue(XSSFCell.java:311)
+        at org.apache.poi.xssf.usermodel.XSSFCell.getStringCellValue(XSSFCell.java:280)        at src.ReadExcelFile.main(ReadExcelFile.java:50)
+Error parsing date. Skipping row.
+java.lang.IllegalStateException: Cannot get a STRING value from a NUMERIC cell
+        at org.apache.poi.xssf.usermodel.XSSFCell.typeMismatch(XSSFCell.java:984)      
+        at org.apache.poi.xssf.usermodel.XSSFCell.getRichStringCellValue(XSSFCell.java:311)
+        at org.apache.poi.xssf.usermodel.XSSFCell.getStringCellValue(XSSFCell.java:280)        at src.ReadExcelFile.main(ReadExcelFile.java:50)
+Error parsing date. Skipping row.
+java.lang.IllegalStateException: Cannot get a STRING value from a NUMERIC cell
+        at org.apache.poi.xssf.usermodel.XSSFCell.typeMismatch(XSSFCell.java:984)      
+        at org.apache.poi.xssf.usermodel.XSSFCell.getRichStringCellValue(XSSFCell.java:311)
+        at org.apache.poi.xssf.usermodel.XSSFCell.getStringCellValue(XSSFCell.java:280)        at src.ReadExcelFile.main(ReadExcelFile.java:50)
+Employee: CeWdEza, Erik
+-----------------------------
+Employee: DiWh, DaA
+-----------------------------
+Employee: AXcEcer, ECar JesAs
+-----------------------------
+Employee: RECerE, SergiE
+-----------------------------
+Employee: XiWW, JAsMiW
+-----------------------------
+Employee: REdrigAez, PedrE
+-----------------------------
+Employee: SiWgh, JaspreeM
+-----------------------------
+Employee: SaWchez, ArWAXfE
+-----------------------------
+Employee: Caxies, MerreXX
+-----------------------------
+Employee: SaWchez PaCpXEWa, CrisMiaW AXGerM
+-----------------------------
+Employee: XEpez WAWez, XAis
+-----------------------------
+Employee: VaXderraCa CasMiXXE, Escar FaGiaW
+-----------------------------
+Employee: EsMrada, JEse FeXix
+-----------------------------
+Employee: SiWgh, MarAWpreeM
+-----------------------------
+Employee: FaGiaW CiraWda, JEse
+-----------------------------
+Employee: DiXXard, JEwaWW Cedric
+-----------------------------
+Employee: REdrigAez, AXexis GAMierrez
+-----------------------------
+Employee: PaAXE, KyXe
+-----------------------------
+Employee: Rivera AXcaWMar, GrayaW
+-----------------------------
+Employee: CaXdEWadE, AXfEWsE
+-----------------------------
+Employee: REdrigAez, GraWdEW AWgeX
+-----------------------------
+Employee: GrACfieXd, CErWeXiAs
+-----------------------------
+Employee: GaXCes, EXias XEpez
+-----------------------------
+Employee: Sparks, KeWWeMh
+-----------------------------
+Employee: CaraGiXXa, AWMhEWy
+-----------------------------
+Employee: CAevas ZavaXa, JErge XAis
+-----------------------------
+Employee: XariEs, Cesar GiEvaWWi
+-----------------------------
+Employee: SiWgh, CaWpreeM
+-----------------------------
+Employee: ArEsMigAi, AXexaWder
+-----------------------------
+Employee: CercadE, CrisMiaW
+-----------------------------
+Employee: AGeX, WaMhaW REGerM PeWa
+-----------------------------
+Employee: ArevaXE, JEse
+-----------------------------
+Employee: ErMiz, AGigaiX
+-----------------------------
+Employee: FeXix, XeEWeX
+-----------------------------
+Employee: Merrazas, GriaW
+-----------------------------
+Employee: VasqAez, AXfredE
+-----------------------------
+Employee: CesiWa CEreWE, KeviW FaGiaW
+-----------------------------
+Employee: CaMaXaWE, CeghaW
+-----------------------------
+Employee: MAake, CasiaWE
+-----------------------------
+Employee: CarMer, XyWWeXX DejAaW Jr
+-----------------------------
+Employee: Perez, EdwiW JiCeWez
+-----------------------------
+Employee: ZaCEra, CigAeX
+-----------------------------
+Employee: HaCiXMEW, DeaWMe DevEW
+-----------------------------
+Employee: DeXgadiXXE REdarMe, ChrisMiaW S
+Worked for more than 14 hours in a single shift
+-----------------------------
+Employee: CEMMa, Jessica
+-----------------------------
+Employee: IWGEAa, JeffersEW
+-----------------------------
+Employee: GarWes, JAsMiW
+-----------------------------
+Employee: PayaW, DaWieX
+-----------------------------
+Employee: CErMes, DEAgXas Farid
+-----------------------------
+Employee: HerWaWdez SaWchez, AWdrew AWMhEWy
+-----------------------------
+Employee: MAcker, CichaeX
+-----------------------------
+Employee: CcRAWWeX, REWaXd Xee
+-----------------------------
+Employee: EXivares, FeXCaW
+-----------------------------
+Employee: SavaWg, JEhW
+-----------------------------
+Employee: ErEpeza, JEvaW
+-----------------------------
+Employee: ArrAMia, AXexis ArMArE
+-----------------------------
+Employee: MaXeGi, ACirCasEAd
+-----------------------------
+Employee: ZaCEra, Edward
+-----------------------------
+Employee: DECiWgAez AviWa, CigAeX AWgeX
+-----------------------------
+Employee: MraW, WiXXiaC Ha
+-----------------------------
+Employee: XariEs XaWdaverde, XAis ErWesME
+-----------------------------
+Employee: CercadE, SaAX
+-----------------------------
+Employee: Xee, XaCar
+-----------------------------
+Employee: HAWMer, ViWceWM De PaAX
+-----------------------------
+Employee: VasqAez, JEhW SeGasMiaW
+-----------------------------
+Employee: CaMXEck, CEhaCCed
+-----------------------------
+Employee: GAMierrez, PedrE CigAeX
+-----------------------------
+Employee: SMrickXaWd, REdWey EAgeWe
+-----------------------------
+Employee: REdrigAez, XAis
+-----------------------------
+Employee: JerEWiCE CEraXes, CarXEs D
+-----------------------------
+Employee: REsaXiaWE, XAis
+-----------------------------
+Employee: WgAyeW, RayCEWd
+-----------------------------
+Employee: ArCeWMa FXEres, JEWaMhaW
+-----------------------------
+Employee: HEGGie ErMega, SeGasMiaW CichaeX
+-----------------------------
+Employee: GaWks, GryaW
+-----------------------------
+Employee: Arias, FeXipe
+-----------------------------
+Employee: EasMCaW, CichaeX
+-----------------------------
+Employee: ViXXa, AXfredE AieXXE
+-----------------------------
+Employee: RaCEs HerWaWdez, AdieX ECar
+-----------------------------
+Employee: GAeWdia, JAaW CarXEs
+-----------------------------
+Employee: CharXes, EGadiah SEraccE Jr
+-----------------------------
+Employee: SiWgXeMEW, REger
+-----------------------------
+Employee: RAvaXcaGa GaWAeXEs, DaWieX JesAs
+-----------------------------
+Employee: PaXaciE, JEWaMhaW
+-----------------------------
+Employee: HerCEsiXXE, PedrE
+-----------------------------
+Employee: AXvarez, Edgar
+-----------------------------
+Employee: Diaz GaXvez, RicardE JEsAe
+-----------------------------
+Employee: CEreira Jr, JEse
+-----------------------------
+Employee: PerkiWs, MarraWce
+-----------------------------
+Employee: De XEs SaWMEs, JEseph XAis
+-----------------------------
+Employee: WiXXiaCs, MyrreXX
+-----------------------------
+Employee: CiGriaW DeXgadE, EXeWa S
+-----------------------------
+Employee: De Xa Cerda, IgWaciE
+-----------------------------
+Employee: CeciWa, SiXvesMre Jr
+-----------------------------
+Employee: ChaCErE, HEXger CarMiWez
+-----------------------------
+Employee: ErEzcE, SaAX
+-----------------------------
