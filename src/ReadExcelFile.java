@@ -65,8 +65,10 @@ public class ReadExcelFile {
                     employeeShifts.computeIfAbsent(employeeName, k -> new ArrayList<>()).add(shift);
                 
                 } catch (ParseException | IllegalStateException e) {
-                    // Handle the ParseException or IllegalStateException, e.g., log the error or skip the row
+                    System.out.println("Error parsing date. Skipping row.");
+                    // Optionally continue to the next iteration to avoid further issues with this row
                     e.printStackTrace();
+                    continue;
                 }
             }
             
