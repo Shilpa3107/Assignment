@@ -32,14 +32,13 @@ public class ReadExcelFile {
                 Date timeIn, timeOut;
                 
                 try {
-                    if (timeInCell == null || timeOutCell == null ||
-                    timeInCell.getCellType() == CellType.BLANK || timeOutCell.getCellType() == CellType.BLANK) {
+                    if (timeInCell == null || timeOutCell == null || timeInCell.getCellType() == CellType.BLANK || timeOutCell.getCellType() == CellType.BLANK) {
                     // Skip empty cells
                     continue;
                 }
                     if (timeInCell.getCellType() == CellType.NUMERIC || timeInCell.getCellType() == CellType.FORMULA) {
                         timeIn = timeInCell.getDateCellValue();
-                    } else if (timeInCell.getCellType() == CellType.STRING) {
+                    } else if (timeInCell.getCellType() == CellType.STRING && !timeInCell.getStringCellValue().isEmpty()) {
                         timeIn = new SimpleDateFormat("MM/dd/yyyy hh:mm a").parse(timeInCell.getStringCellValue());
                     } else {
                         // Handle other cell types if necessary
@@ -48,7 +47,7 @@ public class ReadExcelFile {
                     
                     if (timeOutCell.getCellType() == CellType.NUMERIC || timeOutCell.getCellType() == CellType.FORMULA) {
                         timeOut = timeOutCell.getDateCellValue();
-                    } else if (timeOutCell.getCellType() == CellType.STRING) {
+                    } else if (timeOutCell.getCellType() == CellType.STRING && !timeInCell.getStringCellValue().isEmpty()) {
                         timeOut = new SimpleDateFormat("MM/dd/yyyy hh:mm a").parse(timeOutCell.getStringCellValue());
                     } else {
                         // Handle other cell types if necessary
